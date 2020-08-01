@@ -47,7 +47,7 @@ const options ={
     },
 };
 
-function LineGraph({ casesType='cases' }) {
+function LineGraph({ casesType='cases', ...props }) {
 
     const [chartData, setchartData] = useState({})
 
@@ -73,8 +73,8 @@ function LineGraph({ casesType='cases' }) {
             await fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=120')
             .then(res => res.json())
             .then(data => {
-                const chartData = buildChartData(data)
-                console.log(chartData)
+                const chartData = buildChartData(data, casesType)
+                // console.log(chartData)
                 setchartData(chartData)
             })
         }

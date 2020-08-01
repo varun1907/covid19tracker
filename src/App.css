@@ -15,6 +15,13 @@ body{
   align-items: center;
   margin-bottom: 20px;
 }
+.app_header > h1 {
+  color: #fc3c3c;
+  font-size: 2rem;
+}
+.app_dropdown{
+  background-color: white;
+}
 .app_stats{
   display: flex;
   justify-content: space-between;
@@ -74,7 +81,34 @@ body{
 .info-container {
   width: 150px;
 }
-
+.infoBox{
+  flex:1;
+  cursor: pointer;
+}
+.infoBox:not(:last-child){
+  margin-right: 15px;
+}
+.infoBox--selected {
+  border-top: 10px solid greenyellow;
+}
+.infoBox--red {
+  border-color: red;
+}
+.infoBox_cases--green {
+  color: green !important;
+}
+.infoBox_cases {
+  color: #cc1034;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.infoBox_total {
+  color: #6c757d;
+  font-weight: 700 !important;
+  font-size: 0.8rem !important;
+  margin-top: 15px !important;
+}
 @media (max-width: 990px) {
   .app {
     flex-direction: column;
